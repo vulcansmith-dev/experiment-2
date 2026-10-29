@@ -1,8 +1,8 @@
 name: Java CI/CD pipeline
-  on 
+  on: 
    push:
     branches:['main']
-  pull_request:
+   pull_request:
     branches:['main']
   workflow_dispatch:
 
@@ -13,21 +13,16 @@ jobs:
 
     steps:
             -name:Checkout Repository
-       uses:actions/checkout@v4
+             uses:actions/checkout@v4
 
-      -name:Set up JDK 17
-
-        uses:actions/Setup java@v5
-
+            -name:Set up JDK 17
+             uses:actions/Setup java@v5
         with: 
               java-version:'17'
-
               distribution:'temurin'
 
-      -name:Compile the Java program
+            -name:Compile the Java program
+             run:javac code.java
 
-        run:javac code.java
-
-
-      -name:Run the Java program
-        run:java code
+            -name:Run the Java program
+             run:java code
