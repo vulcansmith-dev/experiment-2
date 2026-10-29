@@ -4,7 +4,7 @@ name: Java CI/CD pipeline
     branches:['main']
    pull_request:
     branches:['main']
-  workflow_dispatch:
+   workflow_dispatch:
 
 jobs:
  
