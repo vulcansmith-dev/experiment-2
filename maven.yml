@@ -26,8 +26,8 @@ jobs:
 
       -name:Compile the Java program
 
-        run:javac hello.java
+        run:javac code.java
 
 
       -name:Run the Java program
-        run:java hello
+        run:java code
